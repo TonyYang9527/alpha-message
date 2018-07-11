@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<jmxConfigurator />
+
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- 典型的日志pattern -->
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="service"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/data/logs/message2-job/service.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/message2-job/service.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<!-- 保留 30天数据，默认无限 <maxHistory>30</maxHistory> -->
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="sql"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/data/logs/message2-job/sql.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/message2-job/sql.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<!-- 保留 30天数据，默认无限 <maxHistory>30</maxHistory> -->
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="sms"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/data/logs/message2-job/sms.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/message2-job/sms.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<!-- 保留 30天数据，默认无限 <maxHistory>30</maxHistory> -->
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="email"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/data/logs/message2-job/email.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/message2-job/email.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<!-- 保留 30天数据，默认无限 <maxHistory>30</maxHistory> -->
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="push"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/data/logs/message2-job/push.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/message2-job/push.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<!-- 保留 30天数据，默认无限 <maxHistory>30</maxHistory> -->
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="sitemsg"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/data/logs/message2-job/sitemsg.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/message2-job/sitemsg.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<!-- 保留 30天数据，默认无限 <maxHistory>30</maxHistory> -->
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="sms.error"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/data/logs/message2-job/sms.error.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/message2-job/sms.error.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<!-- 保留 30天数据，默认无限 <maxHistory>30</maxHistory> -->
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="email.error"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/data/logs/message2-job/email.error.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/message2-job/email.error.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<!-- 保留 30天数据，默认无限 <maxHistory>30</maxHistory> -->
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="push.error"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/data/logs/message2-job/push.error.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/message2-job/push.error.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<!-- 保留 30天数据，默认无限 <maxHistory>30</maxHistory> -->
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="sitemsg.error"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/data/logs/message2-job/sitemsg.error.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/message2-job/sitemsg.error.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<!-- 保留 30天数据，默认无限 <maxHistory>30</maxHistory> -->
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>50MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="sms" level="INFO">
+		<appender-ref ref="sms" />
+		<appender-ref ref="sms.error" />
+	</logger>
+
+	<logger name="email" level="INFO">
+		<appender-ref ref="email" />
+		<appender-ref ref="email.error" />
+	</logger>
+
+	<logger name="push" level="INFO">
+		<appender-ref ref="push" />
+		<appender-ref ref="push.error" />
+	</logger>
+
+	<logger name="sitemsg" level="INFO">
+		<appender-ref ref="sitemsg" />
+		<appender-ref ref="sitemsg.error" />
+	</logger>
+
+	<logger name="com.dcf.iqunxing.message2" level="INFO">
+		<appender-ref ref="service" />
+	</logger>
+
+	<logger name="jdbc.sqltiming" level="INFO">
+		<appender-ref ref="sql" />
+	</logger>
+
+	<!-- root -->
+	<root level="INFO">
+		<appender-ref ref="console" />
+	</root>
+</configuration>

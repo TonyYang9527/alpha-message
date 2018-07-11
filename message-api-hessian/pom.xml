@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.dcf.iqunxing.message2</groupId>
+		<artifactId>message-parent</artifactId>
+		<version>1.0.8.RELEASE</version>
+		<relativePath>../message-parent</relativePath>
+	</parent>
+	<artifactId>message-api-hessian</artifactId>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- message版本号 -->
+		<message-api.version>1.0.6.RELEASE</message-api.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.dcf.iqunxing.message2</groupId>
+			<artifactId>message-api</artifactId>
+			<version>${message-api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.caucho</groupId>
+			<artifactId>hessian</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+	</dependencies>
+</project>
